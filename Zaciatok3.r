@@ -1,5 +1,6 @@
 IWP <- function(x,y,p,w1,w2,w0,niter){
   PN = length(p)
+ 
   z = c()
   for (i in 1:PN)
   {
@@ -106,9 +107,7 @@ IWP <- function(x,y,p,w1,w2,w0,niter){
     }
     
   }
-  
-  
-  
+
   cat ("H={ ", w1,"x1 +", w2,"x2 >= ", w0, " }, Score:", Score )
   return((w0-w1*x)/w2) 
 }
