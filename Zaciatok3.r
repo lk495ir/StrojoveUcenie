@@ -1,6 +1,6 @@
 IWP <- function(x,y,p,w1,w2,w0,niter){
   PN = length(p)
-  plot(x,y,cex=1.5,xlim = c(0,max(x)+1),ylim = c(y-2,max(y+1)))
+  plot(x,y,cex=1.5,xlim = c(0,max(x)+1),ylim = c((min(y)-2),max(y+1)))
   counter = 1
   Score  = 0.5
   for (q in 1 : niter)
@@ -110,7 +110,7 @@ w1p = -0.5
 w2p = 1
 w0p = 6
 
-priam <- IWP(x1,x2,pozit,w1p,w2p,w0p,10)
+priam <- IWP(x1,x2,pozit,w1p,w2p,w0p,6)
 
 lines(x1,priam,col="red")
 
