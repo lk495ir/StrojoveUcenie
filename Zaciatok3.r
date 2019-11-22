@@ -1,6 +1,19 @@
 IWP <- function(x,y,p,w1,w2,w0,niter){
   PN = length(p)
-  plot(x,y,cex=1.5,xlim = c(0,max(x)+1),ylim = c((min(y)-2),max(y+1)),pch = 15)
+  z = c()
+  for (i in 1:PN)
+  {
+    if(p[i] < 0)
+    {
+      z[i]="red"
+    }
+    else 
+    {
+      z[i]="green"
+    }
+  }
+  
+  plot(x,y,cex=1.5,xlim = c(0,max(x)+1),ylim = c((min(y)-2),max(y+1)),pch = 16,col=z)
   counter = 1
   Score  = 0.5
   for (q in 1 : niter)
@@ -112,5 +125,5 @@ w0p = 6
 
 priam <- IWP(x1,x2,pozit,w1p,w2p,w0p,6)
 
-lines(x1,priam,col="red")
+lines(x1,priam)
 
