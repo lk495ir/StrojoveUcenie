@@ -14,7 +14,8 @@ IWP <- function(x,y,p,w1,w2,w0,niter){
     }
   }
   
-  plot(x,y,cex=1.5,xlim = c(0,max(x)+1),ylim = c((min(y)-2),max(y+1)),pch = 16,col=z)
+  plot(x,y,cex=1.5,xlim = c(0,max(x)+1),ylim = c((min(y)-2),max(y+1)),pch = 15,col=z,main="IWP")
+  legend("topleft",legend = c("Pozitivne","Negativne"),col=c("green","red"),cex = 0.8,pch=15)
   counter = 1
   Score  = 0.5
   for (q in 1 : niter)
