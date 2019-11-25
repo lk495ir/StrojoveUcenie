@@ -109,7 +109,7 @@ IWP <- function(x,y,p,w1,w2,w0,niter){
     
   }
 
-  cat ("H={ ", w1,"x1 +", w2,"x2 >= ", w0, " }, Score:", Score )
+  cat ("H_SET={ ", w1,"x1 +", w2,"x2 >= ", w0, " }, Score:", Score )
   return((w0-w1*x)/w2) 
 }
 
